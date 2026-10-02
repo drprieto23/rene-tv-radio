@@ -1,24 +1,54 @@
 import urllib.request
-import re
 
 TV_URL = "https://iptv-org.github.io/iptv/countries/ar.m3u"
-RADIO_URL = "https://mammoli.ar/radio/api/playlist.m3u"
 
 RADIOS = [
-    "Mitre",
-    "La 100",
-    "Aspen",
-    "Rock & Pop",
-    "Mega",
-    "Radio 10",
-    "Rivadavia",
-    "Continental",
-    "La Red",
-    "Pop",
-    "Urbana Play",
-    "Vorterix",
-    "Blue"
+    ("Radio Mitre AM 790",
+     "https://buecrplb01.cienradios.com.ar/Mitre790.aac"),
+
+    ("La 100 FM 99.9",
+     "https://buecrplb01.cienradios.com.ar/la100.aac"),
+
+    ("Aspen FM 102.3",
+     "https://24283.live.streamtheworld.com/ASPENAAC.aac"),
+
+    ("Rock & Pop FM 95.9",
+     "https://playerservices.streamtheworld.com/api/livestream-redirect/ROCKANDPOPAAC_SC"),
+
+    ("Mega FM 98.3",
+     "https://mega.stweb.tv/mega983/live/playlist.m3u8"),
+
+    ("Radio 10 AM 710",
+     "https://s6.stweb.tv/radio10/live/playlist.m3u8"),
+
+    ("Radio Rivadavia AM 630",
+     "https://playerservices.streamtheworld.com/api/livestream-redirect/RIVADAVIAAAC_SC"),
+
+    ("Continental AM 590",
+     "https://playerservices.streamtheworld.com/api/livestream-redirect/CONTINENTAL_SC"),
+
+    ("La Red AM 910",
+     "https://playerservices.streamtheworld.com/api/livestream-redirect/LA_RED_AM910AAC.aac"),
+
+    ("Blue FM 100.7",
+     "https://playerservices.streamtheworld.com/api/livestream-redirect/BLUE_FM_100_7AAC.aac"),
+
+    ("Radio Con Vos FM 89.9",
+     "https://server1.stweb.tv/rcvos/live/playlist.m3u8"),
+
+    ("Metro",
+     "https://playerservices.streamtheworld.com/api/livestream-redirect/METROAAC.aac"),
+
+    ("Vale FM 97.5",
+     "https://s6.stweb.tv/vale/live/playlist.m3u8"),
+
+    ("AM 750",
+     "https://mdstrm.com/audio/601bf3e463786007e6d3b9b0/icecast.audio"),
+
+    ("CNN Radio Argentina",
+     "https://estudio.cnnradioargentina.com.ar/stream"),
 ]
+
 
 def descargar(url):
     req = urllib.request.Request(
@@ -29,70 +59,25 @@ def descargar(url):
         return r.read().decode("utf-8", errors="ignore")
 
 
-def filtrar_radios(m3u):
-    lineas = m3u.splitlines()
-    resultado = []
-
-    for i, linea in enumerate(lineas):
-        if linea.startswith("#EXTINF"):
-            nombre = linea.rsplit(",", 1)[-1].strip()
-
-            if any(
-                re.search(re.escape(radio), nombre, re.IGNORECASE)
-                for radio in RADIOS
-            ):
-                # Cambiamos/añadimos el grupo
-                if 'group-title="' in linea:
-                    linea = re.sub(
-                        r'group-title="[^"]*"',
-                        'group-title="📻 Radios Argentina"',
-                        linea
-                    )
-                else:
-                    linea = linea.replace(
-                        "#EXTINF:",
-                        '#EXTINF: group-title="📻 Radios Argentina" '
-                    )
-
-                resultado.append(linea)
-
-                if i + 1 < len(lineas):
-                    resultado.append(lineas[i + 1])
-
-    return resultado
-
-
 print("Descargando TV Argentina...")
 tv = descargar(TV_URL)
 
-print("Descargando radios...")
-radios = descargar(RADIO_URL)
-
-radios_filtradas = filtrar_radios(radios)
-
-# Quitamos el encabezado original de TV
-tv_lineas = [
-    linea for linea in tv.splitlines()
-    if linea.strip() != "#EXTM3U"
-]
-
 contenido = ["#EXTM3U"]
 
-contenido.append(
-    '#EXTINF:-1 group-title="──────── TV ARGENTINA ────────",📺 TV ARGENTINA'
-)
-contenido.append("")
+# TV
+for linea in tv.splitlines():
+    if linea.strip() != "#EXTM3U":
+        contenido.append(linea)
 
-contenido.extend(tv_lineas)
-
-contenido.append(
-    '#EXTINF:-1 group-title="──────── RADIOS ────────",📻 RADIOS ARGENTINA'
-)
-contenido.append("")
-
-contenido.extend(radios_filtradas)
+# Radios
+for nombre, url in RADIOS:
+    contenido.append(
+        f'#EXTINF:-1 group-title="📻 Radios Argentina",{nombre}'
+    )
+    contenido.append(url)
 
 with open("rene-tv-radio.m3u", "w", encoding="utf-8") as f:
-    f.write("\n".join(contenido))
+    f.write("\n".join(contenido) + "\n")
 
-print(f"Lista creada con {len(radios_filtradas)//2} radios.")
+print("Lista creada correctamente.")
+print(f"Radios incluidas: {len(RADIOS)}")
