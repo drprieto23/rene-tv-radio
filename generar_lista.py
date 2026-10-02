@@ -58,6 +58,12 @@ RESPALDOS = {
         "📰 Noticias"
     ),
 
+    "TVPublica.ar": (
+        "TV Pública",
+        "http://playcom.trapemn.tv:1935/transcoderip/tvpublica.stream/playlist.m3u8",
+        "📺 TV Abierta"
+    ),
+
 }
 
 
