@@ -34,6 +34,34 @@ CANALES = {
     "Pakapaka.ar": "👦 Infantil",
 }
 
+# Canales públicos de respaldo.
+# Se utilizan solamente cuando no aparecen en la fuente principal.
+
+RESPALDOS = {
+    "TodoNoticias.ar": (
+        "TN - Todo Noticias",
+        "https://live-01-01-tn.vodgc.net/TN24/index.m3u8",
+        "📰 Noticias"
+    ),
+
+    "TVPublica.ar": (
+        "TV Pública",
+        "https://www.youtube.com/user/TVPublicaArgentina/live",
+        "📺 TV Abierta"
+    ),
+
+    "C5N.ar": (
+        "C5N",
+        "https://www.youtube.com/c/c5n/live",
+        "📰 Noticias"
+    ),
+
+    "LaNacionPlus.ar": (
+        "LN+",
+        "https://www.youtube.com/c/LaNacionMas/live",
+        "📰 Noticias"
+    ),
+}
 
 RADIOS = [
     ("Radio Mitre AM 790",
@@ -187,6 +215,17 @@ for grupo in orden_grupos:
             extinf, stream = encontrados[tvg_id]
 
             contenido.append(extinf)
+            contenido.append(stream)
+
+        elif tvg_id in RESPALDOS:
+
+            nombre, stream, grupo_respaldo = RESPALDOS[tvg_id]
+
+            contenido.append(
+                f'#EXTINF:-1 tvg-id="{tvg_id}" '
+                f'group-title="{grupo_respaldo}",{nombre}'
+            )
+
             contenido.append(stream)
 
 
