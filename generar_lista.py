@@ -96,10 +96,17 @@ def descargar(url):
 def obtener_tvg_id(linea):
     match = re.search(r'tvg-id="([^"]+)"', linea)
 
-    if match:
-        return match.group(1)
+    if not match:
+        return None
 
-    return None
+    tvg_id = match.group(1)
+
+    # IPTV-org puede agregar variantes:
+    # A24.ar@SD, Telefe.ar@HD, etc.
+    # Nos quedamos con el ID base.
+    tvg_id = tvg_id.split("@")[0]
+
+    return tvg_id
 
 
 print("Descargando TV Argentina...")
