@@ -3,16 +3,14 @@
 http://playcom.trapemn.tv:1935/transcoderip/tvpublica.stream/playlist.m3u8
 #EXTINF:-1 tvg-id="Telefe.ar@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Telefe_%28nuevo_logo%29.png/960px-Telefe_%28nuevo_logo%29.png" group-title="📺 TV Abierta",Telefe (1080p)
 http://45.173.231.22:8000/play/a053/index.m3u8
-#EXTINF:-1 tvg-id="ElTrece.ar@SD" tvg-logo="https://i.imgur.com/TrgBAdA.png" group-title="📺 TV Abierta",El Trece (1080p)
-http://15.204.246.24:8080/eltreceHD/index.m3u8
+#EXTINF:-1 tvg-id="ElTrece.ar" group-title="📺 TV Abierta",El Trece
+https://live-01-02-eltrece.vodgc.net/eltrecetv/index.m3u8
 #EXTINF:-1 tvg-id="AmericaTV.ar@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Am%C3%A9rica_TV_%28Nuevo_logo_Junio_2020%29.png/500px-Am%C3%A9rica_TV_%28Nuevo_logo_Junio_2020%29.png" http-user-agent="Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, como Gecko) Chrome/112.0.0.0 Mobile Safari/537.36" group-title="📺 TV Abierta",America TV (720p)
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, como Gecko) Chrome/112.0.0.0 Mobile Safari/537.36
 #EXTINF:-1 tvg-id="ElNueve.ar@SD" tvg-logo="https://i.imgur.com/cJHP7bU.png" group-title="📺 TV Abierta",El Nueve (1080p)
 http://15.204.246.24:8080/elnueveHD/index.m3u8
 #EXTINF:-1 tvg-id="NETTV.ar@SD" tvg-logo="https://i.imgur.com/IhJ0BjF.png" group-title="📺 TV Abierta",NET TV (720p)
 http://45.134.141.161:2200/ARG/Net_TV/index.m3u8
-#EXTINF:-1 tvg-id="TodoNoticias.ar" group-title="📰 Noticias",TN - Todo Noticias
-https://live-01-01-tn.vodgc.net/TN24/index.m3u8
 #EXTINF:-1 tvg-id="A24.ar@SD" tvg-logo="https://i.imgur.com/LnXQkIU.png" group-title="📰 Noticias",A24 (1080p)
 http://138.59.227.20:8000/play/a05u/index.m3u8
 #EXTINF:-1 tvg-id="Canal26.ar@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Canal_26_logo_%282022%29.svg/500px-Canal_26_logo_%282022%29.svg.png" group-title="📰 Noticias",Canal 26 (Argentina) (1080p)
@@ -27,33 +25,33 @@ http://181.209.105.115:2525/play/cinear/index.m3u8
 http://138.59.227.20:8000/play/a05s/index.m3u8
 #EXTINF:-1 tvg-id="Pakapaka.ar@SD" tvg-logo="https://i.imgur.com/GJbRWwH.png" group-title="👦 Infantil",Pakapaka (1080p)
 http://181.209.105.115:2525/play/pakapaka/index.m3u8
-#EXTINF:-1 group-title="📻 Radios",Radio Mitre AM 790
+#EXTINF:-1 tvg-id="" group-title="📻 Radios",Radio Mitre AM 790
 https://buecrplb01.cienradios.com.ar/Mitre790.aac
-#EXTINF:-1 group-title="📻 Radios",La 100 FM 99.9
+#EXTINF:-1 tvg-id="" group-title="📻 Radios",La 100 FM 99.9
 https://buecrplb01.cienradios.com.ar/la100.aac
-#EXTINF:-1 group-title="📻 Radios",Aspen FM 102.3
+#EXTINF:-1 tvg-id="" group-title="📻 Radios",Aspen FM 102.3
 https://24283.live.streamtheworld.com/ASPENAAC.aac
-#EXTINF:-1 group-title="📻 Radios",Rock & Pop FM 95.9
+#EXTINF:-1 tvg-id="" group-title="📻 Radios",Rock & Pop FM 95.9
 https://playerservices.streamtheworld.com/api/livestream-redirect/ROCKANDPOPAAC_SC
-#EXTINF:-1 group-title="📻 Radios",Mega FM 98.3
+#EXTINF:-1 tvg-id="" group-title="📻 Radios",Mega FM 98.3
 https://mega.stweb.tv/mega983/live/playlist.m3u8
-#EXTINF:-1 group-title="📻 Radios",Radio 10 AM 710
+#EXTINF:-1 tvg-id="" group-title="📻 Radios",Radio 10 AM 710
 https://s6.stweb.tv/radio10/live/playlist.m3u8
-#EXTINF:-1 group-title="📻 Radios",Radio Rivadavia AM 630
+#EXTINF:-1 tvg-id="" group-title="📻 Radios",Radio Rivadavia AM 630
 https://playerservices.streamtheworld.com/api/livestream-redirect/RIVADAVIAAAC_SC
-#EXTINF:-1 group-title="📻 Radios",Continental AM 590
+#EXTINF:-1 tvg-id="" group-title="📻 Radios",Continental AM 590
 https://playerservices.streamtheworld.com/api/livestream-redirect/CONTINENTAL_SC
-#EXTINF:-1 group-title="📻 Radios",La Red AM 910
+#EXTINF:-1 tvg-id="" group-title="📻 Radios",La Red AM 910
 https://playerservices.streamtheworld.com/api/livestream-redirect/LA_RED_AM910AAC.aac
-#EXTINF:-1 group-title="📻 Radios",Blue FM 100.7
+#EXTINF:-1 tvg-id="" group-title="📻 Radios",Blue FM 100.7
 https://playerservices.streamtheworld.com/api/livestream-redirect/BLUE_FM_100_7AAC.aac
-#EXTINF:-1 group-title="📻 Radios",Radio Con Vos FM 89.9
+#EXTINF:-1 tvg-id="" group-title="📻 Radios",Radio Con Vos FM 89.9
 https://server1.stweb.tv/rcvos/live/playlist.m3u8
-#EXTINF:-1 group-title="📻 Radios",Metro
+#EXTINF:-1 tvg-id="" group-title="📻 Radios",Metro
 https://playerservices.streamtheworld.com/api/livestream-redirect/METROAAC.aac
-#EXTINF:-1 group-title="📻 Radios",Vale FM 97.5
+#EXTINF:-1 tvg-id="" group-title="📻 Radios",Vale FM 97.5
 https://s6.stweb.tv/vale/live/playlist.m3u8
-#EXTINF:-1 group-title="📻 Radios",AM 750
+#EXTINF:-1 tvg-id="" group-title="📻 Radios",AM 750
 https://mdstrm.com/audio/601bf3e463786007e6d3b9b0/icecast.audio
-#EXTINF:-1 group-title="📻 Radios",CNN Radio Argentina
+#EXTINF:-1 tvg-id="" group-title="📻 Radios",CNN Radio Argentina
 https://estudio.cnnradioargentina.com.ar/stream
