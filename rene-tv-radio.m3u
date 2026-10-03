@@ -25,6 +25,10 @@ http://181.209.105.115:2525/play/cinear/index.m3u8
 http://138.59.227.20:8000/play/a05s/index.m3u8
 #EXTINF:-1 tvg-id="Pakapaka.ar@SD" tvg-logo="https://i.imgur.com/GJbRWwH.png" group-title="👦 Infantil",Pakapaka (1080p)
 http://181.209.105.115:2525/play/pakapaka/index.m3u8
+#EXTINF:-1 tvg-id="+Perfil.ar" group-title="📰 Noticias",+Perfil
+https://unlimited1-us.dps.live/perfiltv/perfiltv.smil/perfiltv/livestream2/chunks.m3u8
+#EXTINF:-1 tvg-id="TVUniversidad.ar" group-title="📺 TV Abierta",TV Universidad
+https://stratus.stream.cespi.unlp.edu.ar/hls/tvunlp.m3u8
 #EXTINF:-1 tvg-id="" group-title="📻 Radios",Radio Mitre AM 790
 https://buecrplb01.cienradios.com.ar/Mitre790.aac
 #EXTINF:-1 tvg-id="" group-title="📻 Radios",La 100 FM 99.9
@@ -55,3 +59,9 @@ https://s6.stweb.tv/vale/live/playlist.m3u8
 https://mdstrm.com/audio/601bf3e463786007e6d3b9b0/icecast.audio
 #EXTINF:-1 tvg-id="" group-title="📻 Radios",CNN Radio Argentina
 https://estudio.cnnradioargentina.com.ar/stream
+#EXTINF:-1 tvg-id="" group-title="🎸 Música",Eminem ft. Dido - Stan
+https://pub-550ee302d2584029bb999695b2374b2d.r2.dev/Eminem-Stan-Short-Version-ft-Dido_Media_aSLZFdqwh7E_001_1080p.mp4
+#EXTINF:-1 tvg-id="" group-title="🚀 Espacio",NASA - De la Luna a la Tierra
+https://svs.gsfc.nasa.gov/vis/a000000/a005000/a005039/moon_to_earth_1080p30.mp4
+#EXTINF:-1 tvg-id="" group-title="🚀 Espacio",NASA - Viaje a un agujero negro
+https://svs.gsfc.nasa.gov/vis/a010000/a014500/a014576/14576_BHPlunge_Explainer_1080.mp4
