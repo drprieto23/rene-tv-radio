@@ -20,7 +20,7 @@ http://190.128.214.97:64333/play/a010/index.m3u8
 #EXTINF:-1 tvg-id="Encuentro.ar@SD" tvg-logo="https://i.imgur.com/uBBZR1X.png" group-title="🎬 Cine y Series",Encuentro (720p)
 http://138.59.227.20:8000/play/a05s/index.m3u8
 #EXTINF:-1 tvg-id="Pakapaka.ar@SD" tvg-logo="https://i.imgur.com/GJbRWwH.png" group-title="👦 Infantil",Pakapaka (1080p)
-http://190.128.214.97:64333/play/a02r/index.m3u8
+http://138.59.227.20:8000/play/a05t/index.m3u8
 #EXTINF:-1 tvg-id="+Perfil.ar" group-title="📰 Noticias",+Perfil
 https://unlimited1-us.dps.live/perfiltv/perfiltv.smil/perfiltv/livestream2/chunks.m3u8
 #EXTINF:-1 tvg-id="TVUniversidad.ar" group-title="📺 TV Abierta",TV Universidad
