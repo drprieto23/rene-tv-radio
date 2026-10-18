@@ -15,8 +15,6 @@ http://45.134.141.161:2200/ARG/Net_TV/index.m3u8
 http://138.59.227.20:8000/play/a05u/index.m3u8
 #EXTINF:-1 tvg-id="Canal26.ar@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Canal_26_logo_%282022%29.svg/500px-Canal_26_logo_%282022%29.svg.png" group-title="📰 Noticias",Canal 26 (Argentina) (1080p)
 https://stream-gtlc.telecentro.net.ar/hls/canal26hls/main.m3u8
-#EXTINF:-1 tvg-id="CronicaTV.ar@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e8/Cr%C3%B3nica_TV_logotipo_%282008-2015%29.png" group-title="📰 Noticias",Cronica TV (1080p)
-http://190.128.214.97:64333/play/a010/index.m3u8
 #EXTINF:-1 tvg-id="DeporTV.ar@SD" tvg-logo="https://i.imgur.com/THk9ARS.png" group-title="⚽ Deportes",DeporTV (1080p)
 http://158.172.155.130:8000/play/a09y/index.m3u8
 #EXTINF:-1 tvg-id="Encuentro.ar@SD" tvg-logo="https://i.imgur.com/uBBZR1X.png" group-title="🎬 Cine y Series",Encuentro (720p)
